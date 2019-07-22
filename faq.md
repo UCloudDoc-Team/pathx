@@ -69,8 +69,10 @@ toa模块安装验证如下（lsmod |grep toa）：
 
   
 5.添加开机模块自动加载  
-``echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
->> /etc/rc.local``
+```
+echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
+>> /etc/rc.local
+```
 
 **nginx 环境下**，直接在nginx 日志中查看真实访问者地址 日志路径： /var/log/nginx/access.log
 
