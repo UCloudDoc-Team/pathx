@@ -39,8 +39,10 @@ GlobalSSH是一款致力于提高跨国远程管理服务器效率的产品，�
 注：ipssh.net为GlobalSSH产品的正式域名，部分ucloudgda.com结尾的加速域名仍可使用  
 **Linux系统**  
 在命令行工具中输入:  
-`ssh root@103.14.35.114.ipssh.net
-` **Windows系统**  
+```
+ssh root@103.14.35.114.ipssh.net
+```
+**Windows系统**  
 远程桌面连接，计算机处填写加速域名103.14.35.114.ipssh.net，点击连接即可  
 
 ## 产品价格
