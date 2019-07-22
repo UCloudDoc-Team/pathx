@@ -37,7 +37,7 @@
 - 若有，则安装对用版本（yum install pkgname-version.x86\\\_64）  
 - 若无，如下图  
 ![](/images/toa_201810301443.png)  
-则打开网站http://rpm.pbone.net，点击左侧SEARCH标签，填入包名+版本号（如：kernel-devel-3.10.0-693.11.6.el7.x86\\\_64），选择对应的系统发行版本（此处为CentOS7），点击搜索  
+则打开网站 http://rpm.pbone.net 点击左侧SEARCH标签，填入包名+版本号（如：kernel-devel-3.10.0-693.11.6.el7.x86\\\_64），选择对应的系统发行版本（此处为CentOS7），点击搜索  
 ![](/images/toa_201810301447.png) 搜索结果：
 ![](/images/toa_201810301449.png) 或使用谷歌用关键字“rpm.pbone.net
 kernel-devel-3.10.0-693.11.6.el7.x86\\\_64”搜索
