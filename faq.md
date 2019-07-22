@@ -76,7 +76,8 @@ insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
 
   - **apache环境下**，直接在apache日志中查看真实访问者地址  
 
-日志路径：/etc/httpd/logs/access\_log ![](/network/pathx/apache获取真实地址.png)
+日志路径：/etc/httpd/logs/access_log 
+![](/network/pathx/apache获取真实地址.png)
 
   - 其他web配置环境， 采用同样方法在相关web 日志文件中检查即可  
 
@@ -108,14 +109,14 @@ CDN是以资源缓存的方式加速，一般为静态资源。全球动态加�
 ## 源站可以正常访问，加速cname无法正常访问
 
 用curl测试一般会报"curl: (56) Failure when receiving data from the peer"  
-1\. 检查源站是否有安全策略设置，如阿里云的安骑士，若有，可以咨询售后获取pathx ip加入白名单  
-2\. 检查系统参数设置
+1. 检查源站是否有安全策略设置，如阿里云的安骑士，若有，可以咨询售后获取pathx ip加入白名单  
+2. 检查系统参数设置
 
     net.ipv4.tcp_timestamps = 1
     net.ipv4.tcp_tw_recycle = 0
     net.ipv4.tcp_tw_reuse = 1
 
-开启tw\_resuse足够进行TCP连接的回收，tw
+开启tw_resuse足够进行TCP连接的回收，tw
 recycle由于设计的时间较为早期，并没有考虑NAT技术在如今公网已经普及，会导致经过NAT（诸如网吧、4G、WIFI）用户部分的连接失败。当前这个参数已经基本废弃
 
 ## 源站是否可以修改？
