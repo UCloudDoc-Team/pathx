@@ -49,20 +49,21 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 14.04等绝大多数的linux发行版：  
 
 国内：  
-`wget http://pathx.ufile.ucloud.com.cn/linux_toa.tar.gz`
+```wget http://pathx.ufile.ucloud.com.cn/linux_toa.tar.gz```
 
 国外：  
-`wget http://toa.ufile.ucloud.com.cn/linux_toa.tar.gz`
+```wget http://toa.ufile.ucloud.com.cn/linux_toa.tar.gz```
 
   
 4.编译加载  
-``yum install -y gcc
+```
+yum install -y gcc
 tar -zxvf linux_toa.tar.gz
 cd linux_toa
 make
 mv toa.ko /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
 insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
-`` 
+```
 
 toa模块安装验证如下（lsmod |grep toa）：
 ![](/images/toa_201810301534.png)
