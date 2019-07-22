@@ -34,7 +34,7 @@
 
   
 2. yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
-- 若有，则安装对用版本（yum install pkgname-version.x86\\\_64）  
+- 若有，则安装对用版本（yum install pkgname-version.x86_64）  
 - 若无，如下图  
 ![](/images/toa_201810301443.png)  
 则打开网站 http://rpm.pbone.net 点击左侧SEARCH标签，填入包名+版本号（如：kernel-devel-3.10.0-693.11.6.el7.x86\\\_64），选择对应的系统发行版本（此处为CentOS7），点击搜索  
