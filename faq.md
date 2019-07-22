@@ -24,19 +24,18 @@
 64位的linux系统可运行"modprobe toa"尝试加载模块，成功后无需其他操作。  
 如提示未找到该模块，可按如下步骤进行手工编译与加载：
 
-1.
-查看当前内核版本号，确认依赖"kernel -devel、kernel -headers"是否安装以及版本号是否与内核一致('uname
+1.查看当前内核版本号，确认依赖"kernel -devel、kernel -headers"是否安装以及版本号是否与内核一致('uname
 -r && rpm -qa |egrep 'kernel -devel|kernel -headers')：  
 - 若一致，跳过步骤2，进行toa模块的编译安装  
 - 若不一致，如下图：  
-![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm \\-e
-\\-\\-nodeps kernel\\-devel kernel\\-headers)  
-\\- 若未安装依赖，如下图： ![](/network/pathx/toa_201810301432.png)
+![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm -e
+--nodeps kernel-devel kernel-headers)  
+- 若未安装依赖，如下图： ![](/network/pathx/toa_201810301432.png)
 
   
-2\. yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
-\\- 若有，则安装对用版本（yum install pkgname-version.x86\\\_64）  
-\\- 若无，如下图  
+2. yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
+- 若有，则安装对用版本（yum install pkgname-version.x86\\\_64）  
+- 若无，如下图  
 ![](/images/toa_201810301443.png)  
 则打开网站http://rpm.pbone.net，点击左侧SEARCH标签，填入包名+版本号（如：kernel-devel-3.10.0-693.11.6.el7.x86\\\_64），选择对应的系统发行版本（此处为CentOS7），点击搜索  
 ![](/images/toa_201810301447.png) 搜索结果：
