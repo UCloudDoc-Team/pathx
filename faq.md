@@ -72,11 +72,11 @@ toa模块安装验证如下（lsmod |grep toa）：
 `echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 >> /etc/rc.local`
 
-\* **nginx 环境下**，直接在nginx 日志中查看真实访问者地址 日志路径： /var/log/nginx/access.log
+**nginx 环境下**，直接在nginx 日志中查看真实访问者地址 日志路径： /var/log/nginx/access.log
 
 ![](/images/nginx_真实地址.png)
 
-  - **apache环境下**，直接在apache日志中查看真实访问者地址  
+**apache环境下**，直接在apache日志中查看真实访问者地址  
 
 日志路径：/etc/httpd/logs/access_log 
 ![](/network/pathx/apache获取真实地址.png)
