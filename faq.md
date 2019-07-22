@@ -49,6 +49,7 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
   
 3. 下载linux通用版的源码包，该版本支持Centos 6.9和Centos 7、ubuntu
 14.04等绝大多数的linux发行版：  
+
 国内：  
 ```
 wget http://pathx.ufile.ucloud.com.cn/linux_toa.tar.gz
