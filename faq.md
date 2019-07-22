@@ -31,9 +31,8 @@
 ![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm -e
 --nodeps kernel-devel kernel-headers)  
 - 若未安装依赖，如下图： ![](/network/pathx/toa_201810301432.png)
-
   
-2. yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
+2.yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
 - 若有，则安装对用版本（yum install pkgname-version.x86_64）  
 - 若无，如下图  
 ![](/images/toa_201810301443.png)  
@@ -46,8 +45,7 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 |egrep 'kernel-devel|kernel-headers'），如下图：
 ![](/images/toa_201810301453.png)
 
-  
-3. 下载linux通用版的源码包，该版本支持Centos 6.9和Centos 7、ubuntu
+3.下载linux通用版的源码包，该版本支持Centos 6.9和Centos 7、ubuntu
 14.04等绝大多数的linux发行版：  
 
 国内：  
