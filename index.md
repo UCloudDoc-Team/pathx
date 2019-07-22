@@ -3,4 +3,7 @@
 {{indexmenu_n>75}}
 
 **目录**  
-![nsort dsort msort](/images/indexmenu\>/network/PathX#1)
+
+{{indexmenu>:network:pathx#1 | nsort dsort msort}}
+
+
