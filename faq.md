@@ -32,7 +32,7 @@
 --nodeps kernel-devel kernel-headers)  
 - 若未安装依赖，如下图： ![](/network/pathx/toa_201810301432.png)
   
-2.yum搜索是否有与当前内核版本对应的‘kernel-devel、kernel-headers’包  
+2.yum搜索是否有与当前内核版本对应的kernel-devel、kernel-headers
 - 若有，则安装对用版本（yum install pkgname-version.x86_64）  
 - 若无，如下图  
 ![](/images/toa_201810301443.png)  
