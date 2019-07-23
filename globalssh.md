@@ -59,8 +59,10 @@ GlobalSSH现已免费，不收取实例及流量费用。 请合理使用免费�
 
 自产品实例创建之日起，7日内单个实例流量小于2m，将被系统自动回收。 若希望继续使用，请通过如下方式恢复：  
 1、登陆UCloud控制台，主机列表页点击目标EIP右侧的SSH图标，在弹出框内（可修改端口等参数）点确认按钮重新创建。  
-2、使用UCloud CLI资源管理工具，在您熟悉的命令行工具中执行 ”ucloud gssh create --location
-$Location --target-ip $EIP --port $Port“。  
+2、使用UCloud CLI资源管理工具，在您熟悉的命令行工具中执行 
+```
+ucloud gssh create --location $Location --target-ip $EIP --port $Port
+```
 3、登陆UCloud控制台 globalssh列表页 重新创建实例。
 
 ## FAQ
