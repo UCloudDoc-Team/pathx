@@ -56,8 +56,7 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 
   
 4.编译加载  
-```
-yum install -y gcc
+```yum install -y gcc
 tar -zxvf linux_toa.tar.gz
 cd linux_toa
 make
