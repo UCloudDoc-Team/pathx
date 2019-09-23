@@ -2,38 +2,54 @@
 
 # 使用指南
 
-此刻有一个部署在中国的服务 www.ucloud.cn，需要针对洛杉矶、香港地域用户加速的场景为例。
+此刻以一个部署在中国的服务 www.ucloud.cn，需要针对洛杉矶、香港地域用户加速的场景为例。
 
-1）进入线路管理列表，列表显示线路 带宽等关键信息。![](/images/pathx_upath_list.png) 点击列表左上角的创建按钮 进入创建页面；源站选择中国，加速区域选择中国香港和洛杉矶，下方会出现两条线路，右侧显示当前带宽值，根据需要调整。购买加速线路成功后回到线路管理列表 会显示所有购买的线路数据。![](/images/pathx_upath_create.png)
+1）进入线路管理列表，列表显示线路 带宽等关键信息。![](/images/pathx_upath_list.png) 
+
+点击列表左上角的创建按钮 进入创建页面；源站选择中国，加速区域选择中国香港和洛杉矶，下方会出现两条线路，右侧显示当前带宽值，根据需要调整。购买加速线路成功后回到线路管理列表 会显示所有购买的线路数据。![](/images/pathx_upath_create.png)
+
 
 
 2）在线路管理列表，点击每行记录右侧的修改带宽按钮 弹出框内完成修改带宽。 ![](/images/pathx_upath_change_bandwidth.png)
 
 
-3）进入加速配置管理列表，列表显示加速域名、协议端口等关键信息。![](/images/pathx_uga_list.png) 点击列表左上角的创建按钮, 进入创建配置页面，填写源站域名或源站IP www.ucloud.cn，选择源站所在地 中国。此时加速线路下拉列表可以选择之前已经购买的线路（中国香港到中国和洛杉矶到中国）全部勾选。根据您的业务需要勾选4层和7层并设置端口号，选择HTTPS-HTTP或HTTPS-HTTPS协议需要绑定SSL证书。下拉列表中没有证书时，请点击上传新证书。![](/images/pathx_uga_create.png)
+
+3）进入加速配置管理列表，列表显示加速域名、协议端口等关键信息。![](/images/pathx_uga_list.png) 
+
+点击列表左上角的创建按钮, 进入创建配置页面，填写源站域名或源站IP www.ucloud.cn，选择源站所在地 中国。此时加速线路下拉列表可以选择之前已经购买的线路（中国香港到中国和洛杉矶到中国）全部勾选。根据您的业务需要勾选4层和7层并设置端口号，选择HTTPS-HTTP或HTTPS-HTTPS协议需要绑定SSL证书。下拉列表中没有证书时，请点击上传新证书。![](/images/pathx_uga_create.png)
+
 
 
 4）在线路管理列表,点击修改加速区按钮，弹出框内即可完成线路的替换。 ![](/images/pathx_uga_change_upath.png)
 
 
+
 5）在加速配置列表页，鼠标移动到协议端口内容上，会显示出一个修改端口的图标，点击后进入修改端口弹出层。![](/images/pathx_uga_change_port.png) 注意: 4层TCP协议端口和7层加速端口是不能重复的 且 4层+7层加速端口总数不能超过50个。
 
 
+
 6）证书管理页面，可以查看证书的过期时间、证书域名、使用该证书的加速配置等关键信息，
-![](/images/pathx_certificate_list.png) 点击添加按钮可以上传新的SSL证书。![](/images/pathx_certificate_create.png)
+![](/images/pathx_certificate_list.png)  
+点击添加按钮可以上传新的SSL证书。![](/images/pathx_certificate_create.png)
 
 
-7）需要查阅监控数据、价格、线路出口、设置监控告警等信息，可以点击列表中每一行最右侧的详情按钮。
-![](/images/pathx_upath_detail.png)
+7）需要查阅监控数据、价格、线路出口、设置监控告警等信息，可以点击列表中每一行最右侧的详情按钮。加速线路实例详情页如下所示：
+![](/images/pathx_upath_detail.png)  
+加速配置实例详情页如下所示：
 ![](/images/pathx_uga_detail.png)
 
 
-8）加速配置创建成功返回加速域名后，通常要等1分钟时间才能各项配置生效。 先使用 nc 或 telnet $yours.pathx.ucloudgda.com $yoursport 来验证加速服务生效状态，务必确保加速服务生效后再将您的业务域名CName到加速域名上。
+8）加速配置创建成功返回加速域名后，通常要等1分钟时间才能各项配置生效。
+
+先使用 nc 或 telnet $yours.pathx.ucloudgda.com $yoursport 来验证加速服务生效状态，务必确保加速服务生效后再将您的业务域名CName到加速域名上。
 
 场景一：业务域名托管的DNS解析服务商 支持 按地区智能解析
-业务域名 www.ucloud.cn 在中国地区有一条A记录指向 106.75.148.xx，保留该条记录；创建加速配置后，复制加速域名，在DNS解析服务控制台上为美国和中国香港地区各增加一条解析记录，类型选择CName，值填写 $yours.pathx.ucloudgda.com，配置完成后，等待dns全球生效后，在美国或中国香港地区dig www.ucloud.cn 即可看到pathx的加速域名，在中国大陆地区 dig www.ucloud.cn ，依然得到源站 106.75.148.xx
+
+业务域名 www.ucloud.cn 在中国地区有一条A记录指向 106.75.148.xx，保留该条记录；
+创建加速配置后，复制加速域名，在DNS解析服务控制台上为美国和中国香港地区各增加一条解析记录，类型选择CName，值填写 $yours.pathx.ucloudgda.com，配置完成后，等待dns全球生效后，在美国或中国香港地区dig www.ucloud.cn 即可看到pathx的加速域名，而在中国大陆地区 dig www.ucloud.cn ，依然得到源站 106.75.148.xx
 
 场景二：业务域名托管的DNS解析服务商 不支持 按地区智能解析
-如果您期望在加速区域CName到加速域名，同时在源站部署区域 请求访问直接去源站。目前推荐的办法是在加速区域申请使用新的域名如 web.ucloud.cn，添加默认 CName记录到 $yours.pathx.ucloudgda.com。而www.ucloud.cn 保留原来的DNS记录不变。
+
+如果您期望在加速区域CName到加速域名，同时在源站部署区域 客户端请求访问直接去源站。目前推荐的办法是在加速区域申请使用新的域名如 web.ucloud.cn，添加默认 CName记录到 $yours.pathx.ucloudgda.com。而www.ucloud.cn 保留原来的DNS记录不变。
 
 
