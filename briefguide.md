@@ -29,7 +29,9 @@
 
 
 6）证书管理页面，可以查看证书的过期时间、证书域名、使用该证书的加速配置等关键信息，
-![](/images/pathx_certificate_list.png)  点击添加按钮可以上传新的SSL证书。![](/images/pathx_certificate_create.png)
+![](/images/pathx_certificate_list.png)  
+点击添加按钮可以上传新的SSL证书。
+![](/images/pathx_certificate_create.png)
 
 
 7）需要查阅监控数据、价格、线路出口、设置监控告警等信息，可以点击列表中每一行最右侧的详情按钮。加速线路实例详情页如下所示：
