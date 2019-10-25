@@ -1,6 +1,6 @@
 # 原理架构
 
-{{indexmenu_n>2}}
+
 
 全球多个地域分布UCloud网络节点形成加速环路，各个节点之间走专线。  
 ![image](/images/pathx_image001.png)
