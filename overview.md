@@ -1,6 +1,6 @@
 # 概览
 
-* [产品简介](network/pathx/intro). 
+* [产品简介](network/pathx/intro) 
 * [原理架构](network/pathx/structure) 
 * [功能简介](network/pathx/function) 
 * [产品优势](network/pathx/superiority) 
