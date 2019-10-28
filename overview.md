@@ -9,5 +9,4 @@
 * [证书格式](network/pathx/sslformat) 
 * [FAQ](network/pathx/faq) 
 * [苹果审核加速通道](network/pathx/apple) 
-* [GlobalSSH](network/pathx/globalssh)
-   
+* [GlobalSSH](network/pathx/globalssh) 
