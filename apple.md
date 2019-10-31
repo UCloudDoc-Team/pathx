@@ -9,7 +9,7 @@
 
 ## 如何使用
 
-1）填写APP源站（IP或业务域名），加速端口 ![](/network/pathx/apple-20180717.png)
+1）填写APP源站（IP或业务域名），加速端口 ![](/images/apple-20180717.png)
 2）在DNSPOD等DNS解析服务提供商处，选择线路为美国地区，将业务域名 CName 到苹果审核实例提供的加速域名。
 ![](/images/apple-20180717_2.png)
 
