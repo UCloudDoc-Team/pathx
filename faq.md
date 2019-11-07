@@ -87,9 +87,26 @@ echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 
   - 其他web配置环境， 采用同样方法在相关web 日志文件中检查即可  
 
+## 安装了toa 仍然无法查看真实客户端IP
+
+toa原理是从tcp包中取出option字段，解析出真实客户端IP，最后通过内核钩子函数完成替换。如果转发过程中出现了tcp连接截断的情况，如在rs前使用七层负载均衡产品，就会导致安装toa 也获取不到真实客户端IP：
+
+1）client -------> pathx 4层转发 --------- tcp packet (option字段包含：客户端IP ) --------> 7层负载均衡 ----------tcp packet (option字段不再包含 客户端IP) --------> 源站RS（安装toa 不能获取客户端IP）
+
+2）client -------> pathx 4层转发 --------- tcp packet (option字段包含：客户端IP ) --------> 源站RS（安装toa 可以获取客户端IP）
+
+3）client--------> pathx 4层转发 --------- tcp packet (option字段包含：客户端IP ) --------> 4层负载均衡（ulb4开启报文转发 或 AWS NLB开启保留源IP） ----------tcp packet (option字段包含 客户端IP) --------> 源站RS（安装toa 可以获取客户端IP）
+
+
+如果使用http协议场景，七层转发 不需要安装toa模块就可以获取真实客户端IP：
+
+4）client--------> pathx 7层转发 ------X-Forwarded-For---------> 各类LB --------> 源站RS（从http header获取客户端IP）
+
+5）client--------> pathx 7层转发 ------X-Forwarded-For---------> 源站RS（从http header获取客户端IP）
+
 ## 如何查看PathX的出口IP？
 
-请在线路详情页的基本信息模块中查看
+请在console线路资源详情页的基本信息中查看
 
 ## 非UCloud服务器是否可以使用全球动态加速？
 
@@ -102,8 +119,9 @@ echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 
 ## 全球动态加速和CDN加速有区别吗？
 
-CDN是以资源缓存的方式实现加速，通常为静态媒体资源。全链路在公网上。跨国的线路上网络不稳定。
-全球加速优化的是从客户端到源站的跨国(洲)网络质量，依托UCloud的专线调度能力，控制丢包和延迟，不支持应用数据缓存。
+CDN在边缘节点对资源缓存实现访问提速，缓存的对象为静态媒体资源。全链路在公网上，跨国回源的线路不太稳定。国外领先的CDN厂商对回源网络做了深度优化，受政策影响，在某些地区节点数量有限，需要其他产品辅助。
+
+全球应用加速优化的是从客户端到源站的跨国(洲)网络质量，依托UCloud的专线调度能力，控制丢包和延迟，不支持应用数据缓存，每次请求都会访问源站获取资源数据。适合支付、登陆、聊天、长连接等场景
 
 ## HTTP(s)网站或API场景是否可以使用？
 
@@ -115,10 +133,13 @@ CDN是以资源缓存的方式实现加速，通常为静态媒体资源。全�
 
 以中国(多地)到香港的加速为例，创建加速后，华北、华东、华南的用户访问同一个加速域名，但解析出的IP不同，这些IP分别对应pathx在三个地区的入口，也即，不同区域的用户访问pathx加速域名会解析出离用户最近的加速入口IP。
 
-## 源站可以正常访问，加速cname无法正常访问
+## 资源使用一段时间后，PathX或GlobalSSH的加速域名突然无法正常访问，而源站可以正常访问
 
-用curl测试一般会报"curl: (56) Failure when receiving data from the peer"  
-1. 检查源站是否有安全策略设置，如阿里云的安骑士，若有，可以咨询售后获取pathx ip加入白名单  
+用curl测试一般会报"curl: (56) Failure when receiving data from the peer"
+用telnet测试 提示连接成功后，立即收到"Reset By Remote Peer"
+
+1. 检查源站是否有安全策略设置，如阿里云的安骑士（云盾会在用户不做任何配置情况下自动封堵，需要开启白名单IP保护），fail2ban等，若有，可以从console资源详情页获取pathx或globalssh 出口ip加入白名单
+
 2. 检查系统参数设置
 
     net.ipv4.tcp_timestamps = 1
