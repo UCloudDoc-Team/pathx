@@ -58,22 +58,28 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 
   
 4.编译加载  
-```yum install -y gcc
+```
+yum install -y gcc
 tar -zxvf linux_toa.tar.gz
 cd linux_toa
 make
 mv toa.ko /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
 insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
+
 ```
 
 toa模块安装验证如下（lsmod |grep toa）：
+
 ![](/images/toa_201810301534.png)
 
   
 5.添加开机模块自动加载  
+
 ```
+
 echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 >> /etc/rc.local
+
 ```
 
 **nginx 环境下**，直接在nginx 日志中查看真实访问者地址 日志路径： /var/log/nginx/access.log
@@ -83,6 +89,7 @@ echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 **apache环境下**，直接在apache日志中查看真实访问者地址  
 
 日志路径：/etc/httpd/logs/access_log 
+
 ![](/images/apache获取真实地址.png)
 
   - 其他web配置环境， 采用同样方法在相关web 日志文件中检查即可  
