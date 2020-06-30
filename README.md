@@ -8,6 +8,10 @@
 * [使用指南](/pathx/briefguide) 
 * [价格说明](/pathx/price) 
 * [证书格式](/pathx/sslformat) 
-* [FAQ](/pathx/faq) 
+* FAQ
+  * [概念相关](/pathx/FAQ/basic_concept.md)
+  * [PathX规则设定](/pathx/FAQ/pathx_rule.md)
+  * [PathX使用](/pathx/FAQ/use_pathx.md)
+  * [获取访问者IP](/pathx/FAQ/user_ip.md)
 * [苹果审核加速通道](/pathx/apple) 
 * [GlobalSSH](/pathx/globalssh)
