@@ -93,8 +93,6 @@ ucloud gssh create --location $Location --target-ip $EIP --port $Port
 
 **使用 GlobalSSH 端口不通**   
 1）实例运行需要1分钟的启动时间。超出该时间后，先确认源站的相同端口是否可以连接；
-
 2）在 GlobalSSH 实例详情页，检查下访问白名单，如果配置了白名单，出现在白名单中的IP才可以连接；
-
 3）中国大陆地区Ping GlobalSSH 的域名，如果可以 Ping 通，试试 telnet GlobalSSH域名 端口 是否可以连接（无法连接提供给我们）；如果 Ping 不通，请dig下 GlobalSSH域名，将结果提供给我们。
 
