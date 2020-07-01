@@ -55,7 +55,14 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 注：ipssh.net为GlobalSSH产品的正式域名，部分ucloudgda.com结尾的加速域名仍可使用  
 
 **Linux系统**  
-以云主机操作系统centos,SSH端口为22为例，在命令行工具中输入:  
+
+在远程登录工具中，使用**加速域名**进行登录。
+
+图形界面连接示意：
+
+![](images/globalssh_use.png)
+
+命令行登录示意（CentOS）:  
 ```
 ssh root@103.14.35.114.ipssh.net
 ```
