@@ -103,7 +103,7 @@ ssh {用户名}@{AcceleratingDomain} -p ${GlobalSSHPort}
 
  * 企业版：60元/月。
  
- * 期间版：300元/月。
+ * 旗舰版：300元/月。
 
  
 ## 回收逻辑
