@@ -32,7 +32,7 @@ GlobalSSH是一款致力于提高跨国远程管理服务器效率的产品，�
 | **带宽上限**       | 2Mbps   | 5Mbps   | 20Mbps | 60Mbps |
 | **日免费流量**     | 1GB     | 2GB     | 50GB   | 200GB   |
 | **流量用尽后限速** | 250Kbps | 500Kbps | 2Mbps  | 6Mbps  |
-| **修改端口**       | 不支持  | 不支持  | 支持   | 支持   |
+| **修改端口**       | 不支持  | 支持  | 支持   | 支持   |
 
 
 ## 场景限制
@@ -125,6 +125,8 @@ ucloud gssh create --location $Location --target-ip $EIP --port $Port
 3、登陆UCloud控制台PathX产品下 GlobalSSH列表，选择离源站较近的区域，填写源站IP，重新开通即可。
 
 ## FAQ
+**GlobalSSH最大空闲连接时间**
+通常是300s（少部分转发机器会限制在90s），如果需要保持长连接，请在客户端或服务端开启keepalive保活并减少探测间隔时间。
 
 **如何使用 GlobalSSH 白名单功能？**  
 该白名单不同于源站的防火墙白名单，仅用来控制可以访问GlobalSSH的来源IP。在GlobalSSH管理列表，点击查看详情，在详情页面左侧基本信息-白名单，进行编辑添加，支持IPv4段或多个IPv4地址。
