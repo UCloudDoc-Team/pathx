@@ -1,5 +1,3 @@
-<div class="sidebar_title icon__ugaa"> 全球动态加速 PathX</div>
-
 * [概览](/pathx/README)
 * [产品简介](/pathx/intro) 
 * [原理架构](/pathx/structure) 
