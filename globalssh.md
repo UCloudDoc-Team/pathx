@@ -125,7 +125,7 @@ ucloud gssh create --location $Location --target-ip $EIP --port $Port
 3、登陆UCloud控制台PathX产品下 GlobalSSH列表，选择离源站较近的区域，填写源站IP，重新开通即可。
 
 ## FAQ
-**GlobalSSH最大空闲连接时间**
+**GlobalSSH最大空闲连接时间**   
 通常是300s（少部分转发机器会限制在90s），如果需要保持长连接，请在客户端或服务端开启keepalive保活并减少探测间隔时间。
 
 **如何使用 GlobalSSH 白名单功能？**  
