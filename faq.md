@@ -50,13 +50,13 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 3.下载linux通用版的源码包，该版本支持Centos 6.9和Centos 7、ubuntu
 14.04等绝大多数的linux发行版：  
 
-国内：  
-```wget http://pathx.ufile.ucloud.com.cn/linux_toa.tar.gz```
+从中国大陆地区下载：  
+```wget http://pathx.cn-bj.ufileos.com/linux_toa.tar.gz```
 
-国外：  
-```wget http://toa.ufile.ucloud.com.cn/linux_toa.tar.gz```
+从中国大陆之外地区下载：  
+```wget http://toa.hk.ufileos.com/linux_toa.tar.gz```
 
-  
+
 4.编译加载  
 ```
 yum install -y gcc
