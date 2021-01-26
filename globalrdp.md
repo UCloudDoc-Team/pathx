@@ -46,7 +46,7 @@ GlobalRDP是一款致力于提高跨国远程管理服务器效率的产品，�
 
 #### 云主机产品入口创建
 
-1.进入云主机产品列表，点击GlobalRDP的“R”灰色图标  
+1.进入云主机产品列表，点击GlobalRDP的“R”灰色图标。不支持GlobalRDP的地域，仍可使用GlobalSSH。
 ![](/images/globalrdp01.png)
 
 2.选择版本、服务器靠近区域、端口，点击确定按钮创建  
@@ -117,5 +117,6 @@ GlobalRDP是一款致力于提高跨国远程管理服务器效率的产品，�
 
 **使用 GlobalRDP 端口不通**   
 1）实例运行需要1分钟的启动时间。超出该时间后，先确认源站的相同端口是否可以连接；
+
 2）中国大陆地区Ping GlobalRDP 的域名，如果可以 Ping 通，试试 telnet GlobalRDP域名 端口 是否可以连接（无法连接提供给我们）；如果 Ping 不通，请dig下 GlobalRDP域名，将结果提供给我们。
 
