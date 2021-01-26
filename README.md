@@ -11,3 +11,5 @@
 * [FAQ](/pathx/faq) 
 * [苹果审核加速通道](/pathx/apple) 
 * [GlobalSSH](/pathx/globalssh)
+* [GlobalRDP](/pathx/globalrdp)
+
