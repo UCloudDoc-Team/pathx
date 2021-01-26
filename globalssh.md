@@ -61,7 +61,7 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 #### PathX入口创建
 
 1.进入PathX产品下的GlobalSSH标签页，点击创建按钮  
-![](/images/globalrdp03.png)
+![](/images/globalssh0126-4.png)
 
 2.输入需要加速的服务器IP，选择可覆盖你服务器物理位置的区域选项，输入服务器端口号并创建。  
 如：假设服务器在华盛顿，选择华盛顿选项即可；假设服务器在曼谷，可选择能覆盖曼谷区域的香港或新加坡选项  
