@@ -93,7 +93,7 @@ ssh {用户名}@{AcceleratingDomain}
 ssh {用户名}@{AcceleratingDomain} -p ${GlobalSSHPort}
 ```
 
-友情提示，当您使用其他友商云主机或不同linux发行版，注意SSH登陆的用户名可能不同
+友情提示，当您使用其他友商云主机或不同linux发行版，注意SSH登录的用户名可能不同
 
 **Windows系统**  
 远程桌面连接，以默认端口3389为例，打开系统RDP客户端，计算机处填写加速域名${AcceleratingDomain}，免费版为${AcceleratingDomain}:${GlobalSSHPort}。输入用户名及密码点击连接，即可。
@@ -119,13 +119,13 @@ ssh {用户名}@{AcceleratingDomain} -p ${GlobalSSHPort}
 
 若您希望继续使用，可通过如下方式恢复：  
 
-1、登陆UCloud控制台，主机列表页点击目标EIP右侧的“S”图标，在弹出框内（可修改端口等参数）点确认按钮重新创建。  
+1、登录UCloud控制台，主机列表页点击目标EIP右侧的“S”图标，在弹出框内（可修改端口等参数）点确认按钮重新创建。  
 
 2、使用UCloud CLI资源管理工具，在您熟悉的命令行工具中执行 
 ```
 ucloud gssh create --location $Location --target-ip $EIP --port $Port
 ```
-3、登陆UCloud控制台PathX产品下 GlobalSSH列表，选择离源站较近的区域，填写源站IP，重新开通即可。
+3、登录UCloud控制台PathX产品下 GlobalSSH列表，选择离源站较近的区域，填写源站IP，重新开通即可。
 
 ## FAQ
 **GlobalSSH最大空闲连接时间**   
