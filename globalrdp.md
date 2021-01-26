@@ -69,7 +69,7 @@ GlobalRDP是一款致力于提高跨国远程管理服务器效率的产品，�
 成功创建后，会生成一个类似xxx.ipssh.net的域名  
 ![](/images/gs_20180823151312.png)  
 
-远程桌面连接，以默认端口3389为例，打开系统RDP客户端，计算机处填写加速域名${AcceleratingDomain}，免费版为${AcceleratingDomain}:${GlobalSSHPort}。输入用户名及密码点击连接，即可。
+远程桌面连接，以默认端口3389为例，打开系统RDP客户端，计算机处填写加速域名${AcceleratingDomain}，免费版为${AcceleratingDomain}:${GlobalRDPPort}。输入用户名及密码点击连接，即可。
 
 ## 产品价格
 
