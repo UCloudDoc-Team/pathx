@@ -11,23 +11,23 @@
 
 ## 为什么看到大量固定的IP地址在访问源站服务器？
 
-这些地址是加速集群出口EIP，起到两个作用：  
-1、传输业务流量（可通过toa模块获取访问者真实IP）  
-2、对源站服务器做健康检查  
-对源站服务器做健康检查是通过TCP三次握手的原理来探测源站可用性，为短连接。
+这些地址是加速集群转发节点IP，起到两个作用：  
+1、传输您的业务数据流量（可通过toa模块获取访问者真实IP）  
+2、对源站服务器定时做健康检查  
+对源站服务器做健康检查是通过TCP三次握手的原理来探测源站可用性，为短连接。对于UDP端口 暂不支持健康检查。
 
 注意：源站相关的云服务商或IDC安全策略，可能对短时间内大量的tcp短连接比较敏感，例如友商的安骑士、云盾会在您不知情的情况下误杀这类IP。安全起见，建议在加速线路详情页获得出口EIP列表后 提前加入到云盾白名单内（包括友商的CDN厂商信任列表，WAF产品白名单）。
 
 ## 如何获取访问者真实IP？
 
-由于经过加速，在日志中看到的访问者IP全部变为PathX的出口IP。 如果需要获取真实的客户端IP,
-可以在您的源站服务器上加载UCloud专有的内核模块，让应用直接获取到源IP，这时候，再去查看日志，就是访问者的真实IP了。  
-**Linux系统**  
-64位的linux系统可运行"modprobe toa"尝试加载模块，成功后无需其他操作。  
-如提示未找到该模块，可按如下步骤进行手工编译与加载：
+由于经过加速线路，发生了nat转换，在业务日志中看到的来源客户端IP变为PathX的出口IP。 如果需要获取真实的客户端IP, 可以在您的源站服务器上加载UCloud定制开发的内核toa模块，让应用无需修改代码 不用重新部署即可获取到真实的来源客户端IP。 注意：toa模块目前仅支持ipv4 不支持ipv6。 如果您的源站监听了ipv6地址端口 无法通过此途径获取真实客户端IP的，需要修改监听方式。
 
-1.查看当前内核版本号，确认依赖"kernel -devel、kernel -headers"是否安装以及版本号是否与内核一致('uname
--r && rpm -qa |egrep 'kernel -devel|kernel -headers')：  
+**Linux系统**  
+UCloud快杰主机上已经安装好toa模块，执行"modprobe toa"即可加载该模块，如加载成功后无需其他操作。  
+如提示未找到该模块或非快杰主机，可按如下简单步骤进行手工编译与加载：
+
+1.查看当前内核版本号，确认依赖"kernel-devel、kernel-headers"是否安装以及版本号是否与内核一致('uname
+-r && rpm -qa |egrep 'kernel-devel|kernel-headers')：  
 若一致，跳过步骤2，进行toa模块的编译安装  
 若不一致，如下图：  
 ![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm -e
@@ -47,17 +47,19 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 |egrep 'kernel-devel|kernel-headers'），如下图：
 ![](/images/toa_201810301453.png)
 
-3.下载linux通用版的源码包，该版本支持Centos 6.9和Centos 7、ubuntu
-14.04等绝大多数的linux发行版：  
+3. 下载内核小版本对应的kernel-devel kernel-headers rpm安装包, 除了通过搜索引擎或rpmfind等途径找到，历史版本的centos系统，可以去 https://vault.centos.org/ 看看对应centos版本x86_64/os/packages目录。
 
-从中国大陆地区下载：  
+4. UCloud长期维护该linux内核通用toa源码包，目前已经支持Centos 6.9和Centos 7、Centos 8、ubuntu14.04等绝大多数的linux发行版。
+
+中国大陆地区下载地址：  
 ```wget http://pathx.cn-bj.ufileos.com/linux_toa.tar.gz```
 
-从中国大陆之外地区下载：  
+中国大陆之外地区下载地址：  
 ```wget http://toa.hk.ufileos.com/linux_toa.tar.gz```
 
 
-4.编译加载  
+4.编译加载toa模块过程，由于操作系统和内核版本不断更新，编译过程可能会出现文档中未能描述的情形，如编译报错提示：缺少其他模块或内核函数签名错误，除了善用搜索引擎安装对应模块，
+您可联系技术支持寻求帮助。
 ```
 yum install -y gcc
 tar -zxvf linux_toa.tar.gz
