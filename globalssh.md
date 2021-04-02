@@ -76,6 +76,8 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 ![](/images/gs_20180823151312.png)  
 注：ipssh.net为GlobalSSH产品的正式域名，部分ucloudgda.com结尾的加速域名仍可使用  
 
+> 禁止加速域名直接提供HTTP/HTTPS访问。
+
 **Linux系统**  
 
 在远程登录工具中，使用**加速域名**进行登录。
@@ -94,9 +96,6 @@ ssh {用户名}@{AcceleratingDomain} -p ${GlobalSSHPort}
 ```
 
 友情提示，当您使用其他友商云主机或不同linux发行版，注意SSH登录的用户名可能不同
-
-**Windows系统**  
-远程桌面连接，以默认端口3389为例，打开系统RDP客户端，计算机处填写加速域名${AcceleratingDomain}，免费版为${AcceleratingDomain}:${GlobalSSHPort}。输入用户名及密码点击连接，即可。
 
 ## 产品价格
 
