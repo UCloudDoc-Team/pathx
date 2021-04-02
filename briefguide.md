@@ -36,7 +36,7 @@
 
 先使用 nc 或 telnet $yours.pathx.ucloudgda.com $yoursport 来验证加速服务生效状态，务必确保加速服务生效后再将您的业务域名CName到加速域名上。
 
-> 禁用加速域名直接提供HTTP/HTTPS访问。
+> 禁止加速域名直接提供HTTP/HTTPS访问。
 
 场景一：业务域名托管的DNS解析服务商 支持 按地区智能解析
 
