@@ -55,7 +55,7 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 1.进入云主机/EIP产品列表，点击GlobalSSH的“S”灰色图标  
 ![](/images/globalssh0126-1.png)
 
-2.选择版本GlobalSSH的版本  
+2.选择GlobalSSH的版本  
 ![](/images/gssh01.png)
 
 3.填写服务器IP、靠近区域、服务器端口等信息，点击确定按钮创建  
