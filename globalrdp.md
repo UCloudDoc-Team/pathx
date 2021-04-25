@@ -49,8 +49,12 @@ GlobalRDP是一款致力于提高跨国远程管理服务器效率的产品，�
 1.进入云主机产品列表，点击GlobalRDP的“R”灰色图标。不支持GlobalRDP的地域，仍可使用GlobalSSH。
 ![](/images/globalrdp01.png)
 
-2.选择版本、服务器靠近区域、端口，点击确定按钮创建  
-![](/images/globalrdp02.png)
+2.选择GlobalRDP的版本
+![](/images/grdp01.png)
+
+3.填写服务器IP、靠近区域、服务器端口等信息，点击确定按钮创建  
+![](/images/grdp02.png)
+
 
 #### PathX入口创建
 
@@ -59,7 +63,7 @@ GlobalRDP是一款致力于提高跨国远程管理服务器效率的产品，�
 
 2.输入需要加速的服务器IP，选择可覆盖你服务器物理位置的区域选项，输入服务器端口号并创建。  
 如：假设服务器在洛杉矶，选择洛杉矶选项即可；假设服务器在曼谷，可选择能覆盖曼谷区域的香港或新加坡选项  
-![](/images/globalrdp04.png)
+![](/images/grdp02.png)
 
 
 免费版GlobalRDP采用共享IP的方式，不同的实例会分配不同的端口用于RDP连接，因此GlobalRDP端口与服务器端口不一致。
