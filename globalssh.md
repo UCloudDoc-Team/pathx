@@ -55,8 +55,12 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 1.进入云主机/EIP产品列表，点击GlobalSSH的“S”灰色图标  
 ![](/images/globalssh0126-1.png)
 
-2.选择版本、服务器靠近区域、端口，点击确定按钮创建  
-![](/images/globalssh0126-02.png)
+2.选择版本GlobalSSH的版本  
+![](/images/gssh01.png)
+
+3.填写服务器IP、靠近区域、服务器端口等信息，点击确定按钮创建  
+![](/images/gssh02.png)
+
 
 #### PathX入口创建
 
@@ -65,7 +69,7 @@ ssh -L localhost:6443:localhost:6443 root@103.14.35.114.ipssh.net
 
 2.输入需要加速的服务器IP，选择可覆盖你服务器物理位置的区域选项，输入服务器端口号并创建。  
 如：假设服务器在华盛顿，选择华盛顿选项即可；假设服务器在曼谷，可选择能覆盖曼谷区域的香港或新加坡选项  
-![](/images/globalssh0126-3.png)
+![](/images/gssh02.png)
 
 
 免费版GlobalSSH采用共享IP的方式，不同的实例会分配不同的端口用于SSH连接，因此GlobalSSH端口与服务器端口不一致。
