@@ -33,10 +33,10 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 14.04等绝大多数的linux发行版：  
 
 国内：  
-```wget http://pathx.ufile.ucloud.com.cn/linux_toa.tar.gz```
+```wget http://pathx.cn-bj.ufileos.com/linux_toa.tar.gz```
 
 国外：  
-```wget http://toa.ufile.ucloud.com.cn/linux_toa.tar.gz```
+```wget http://toa.hk.ufileos.com/linux_toa.tar.gz```
 
   
 4.编译加载  
