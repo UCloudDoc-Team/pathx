@@ -1,7 +1,6 @@
 # 概览
 
 * [产品简介](/pathx/intro) 
-* [原理架构](/pathx/structure) 
 * [功能简介](/pathx/function) 
 * [产品优势](/pathx/superiority) 
 * [名词解释](/pathx/concepts) 
