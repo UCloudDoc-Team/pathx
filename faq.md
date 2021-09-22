@@ -98,7 +98,7 @@ echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 
 ## 安装了toa 仍然无法查看真实客户端IP
 
-toa原理是从tcp包中取出option字段，解析出真实客户端IP，最后通过内核钩子函数完成替换，服务程序调用的socket库可以通过getpeername方法获取到真实客户端IP。由于toa目前不支持ipv6, 如果源站服务监听了ipv6地址，如golang服务默认监听方式，也会导致无法获取真实客户端IP，需要业务调整服务监听方式。如果必须支持ipv6栈下获取真实客户端IP,请联系我们讨论解决方案。
+toa原理是从tcp包中取出option字段，解析出真实客户端IP，最后通过内核钩子函数完成替换，服务程序调用的socket库可以通过getpeername方法获取到真实客户端IP。由于toa目前不支持ipv6, 如果源站服务监听了ipv6地址，如golang服务默认监听方式，也会导致无法获取真实客户端IP，需要业务调整服务监听方式。
 
 
 如果整条链路转发过程中出现了tcp连接截断的情况，分成两段tcp连接。如在rs前使用了七层负载均衡或tcp请求代理模式，就会导致安装toa成功，仍然获取不到真实客户端IP：
