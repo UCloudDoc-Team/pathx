@@ -49,11 +49,9 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 
 4. UCloud长期维护该linux内核通用toa源码包。
 
-中国大陆地区下载地址：  
-```wget http://pathx.cn-bj.ufileos.com/linux_toa.tar.gz```
+```wget https://github.com/ucloud/toa/archive/master.zip```
 
-中国大陆之外地区下载地址：  
-```wget http://toa.hk.ufileos.com/linux_toa.tar.gz```
+```git clone https://github.com/ucloud/toa.git```
 
 
 5.编译加载toa模块过程，由于操作系统和内核版本不断更新，编译过程可能会出现文档中未能描述的情形，如编译报错提示：缺少其他模块或内核函数签名错误，除了善用搜索引擎安装对应模块，
