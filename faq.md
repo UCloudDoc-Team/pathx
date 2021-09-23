@@ -20,16 +20,15 @@
 
 ## 如何获取访问者真实IP？
 
-由于经过加速线路，发生了nat转换，在业务日志中看到的来源客户端IP变为PathX的出口IP。 如果需要获取真实的客户端IP, 可以在您的源站服务器上加载UCloud定制开发的内核toa模块，让应用无需修改代码 不用重新部署即可获取到真实的来源客户端IP。 
+传输您的业务数据流量（可通过toa模块获取访问者真实IP）  
+由于经过加速线路，发生了nat转换，在业务日志中看到的来源客户端IP变为PathX的出口IP。如果需要获取真实的客户端IPa，可以在源站服务器上安装UCloud定制开发的内核toa模块，使应用无需修改代码即可获取到真实的来源客户端IP。 
 
 **Linux系统**  
 
-1.查看当前内核版本号，确认依赖"kernel-devel、kernel-headers"是否安装以及版本号是否与内核一致('uname
--r && rpm -qa |egrep 'kernel-devel|kernel-headers')：  
+1、查看当前内核版本号，确认依赖"kernel-devel、kernel-headers"是否安装以及版本号是否与内核一致('uname -r && rpm -qa |egrep 'kernel-devel|kernel-headers')：  
 若一致，跳过步骤2，进行toa模块的编译安装  
 若不一致，如下图：  
-![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm -e
---nodeps kernel-devel kernel-headers)  
+![](/images/toa_201810301429.png) 需要卸载后进行步骤2操作(rpm -e --nodeps kernel-devel kernel-headers)  
 若未安装依赖，如下图： ![](/images/toa_201810301432.png)
   
 2.yum搜索是否有与当前内核版本对应的kernel-devel、kernel-headers
@@ -47,12 +46,11 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 
 3. 下载内核小版本对应的kernel-devel kernel-headers rpm安装包, 除了通过搜索引擎或rpmfind等途径找到，历史版本的centos系统，可以去 https://vault.centos.org/ 看看对应centos版本x86_64/os/packages目录。
 
-4. UCloud长期维护该linux内核通用toa源码包。
+4. 下载toa模块。
 
 ```git clone https://github.com/ucloud/toa.git```
 
-5.编译加载toa模块过程，由于操作系统和内核版本不断更新，编译过程可能会出现文档中未能描述的情形，如编译报错提示：缺少其他模块或内核函数签名错误，除了善用搜索引擎安装对应模块，
-您可联系技术支持寻求帮助。
+5.编译加载toa模块。
 ```
 yum install -y gcc
 cd toa
