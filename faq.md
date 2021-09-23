@@ -49,17 +49,13 @@ kernel-devel-3.10.0-693.11.6.el7.x86_64”搜索
 
 4. UCloud长期维护该linux内核通用toa源码包。
 
-```wget https://github.com/ucloud/toa/archive/master.zip```
-
 ```git clone https://github.com/ucloud/toa.git```
-
 
 5.编译加载toa模块过程，由于操作系统和内核版本不断更新，编译过程可能会出现文档中未能描述的情形，如编译报错提示：缺少其他模块或内核函数签名错误，除了善用搜索引擎安装对应模块，
 您可联系技术支持寻求帮助。
 ```
 yum install -y gcc
-tar -zxvf linux_toa.tar.gz
-cd linux_toa
+cd toa
 make
 mv toa.ko /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
 insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko
@@ -94,7 +90,7 @@ echo "insmod /lib/modules/`uname -r`/kernel/net/netfilter/ipvs/toa.ko"
 
 ## 安装了toa 仍然无法查看真实客户端IP
 
-toa原理是从tcp包中取出option字段，解析出真实客户端IP，最后通过内核钩子函数完成替换，服务程序调用的socket库可以通过getpeername方法获取到真实客户端IP。PathX不支持IPv6加速，如果源站服务同时监听了IPv4/IPv6地址，如golang服务的默认监听方式，toa模块也支持获取客户端IP。
+toa原理是从tcp包中取出option字段，解析出真实客户端IP，最后通过内核钩子函数完成替换，服务程序调用的socket库可以通过getpeername方法获取到真实客户端IP。PathX不支持IPv6加速，如果源站服务同时监听IPv4/IPv6地址，如golang服务的默认监听方式，toa模块也支持获取客户端IP。
 
 
 如果整条链路转发过程中出现了tcp连接截断的情况，分成两段tcp连接。如在rs前使用了七层负载均衡或tcp请求代理模式，就会导致安装toa成功，仍然获取不到真实客户端IP：
