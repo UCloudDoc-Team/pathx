@@ -5,6 +5,7 @@
 * [产品优势](/pathx/superiority) 
 * [名词解释](/pathx/concepts) 
 * [使用指南](/pathx/briefguide) 
+* [最佳实践](domainacceleration)
 * [价格说明](/pathx/price) 
 * [证书格式](/pathx/sslformat) 
 * [FAQ](/pathx/faq) 
