@@ -8,5 +8,4 @@
 * [证书格式](/pathx/sslformat) 
 * [FAQ](/pathx/faq) 
 * [苹果审核加速通道](/pathx/apple) 
-* [GlobalSSH](/pathx/globalssh)
-* [GlobalRDP](/pathx/globalrdp)
+
