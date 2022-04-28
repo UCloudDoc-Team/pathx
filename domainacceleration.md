@@ -29,6 +29,7 @@ UCloud平台为国内开发者提供了以下域名的免费加速，无需任�
 | **docker**    | download.docker.com                                     |
 | **go**        | golang.org                                              |
 |               | go.googlesource.com                                     |
+| **python**    | files.pythonhosted.org                                  |
 | **其他**       | conda.anaconda.org                                      |
 |               | conda.io                                                |
 |               | repo.anaconda.com                                       |
