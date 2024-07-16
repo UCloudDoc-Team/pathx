@@ -3,11 +3,11 @@
 * 产品简介
      * [产品概述](/pathx/introduction/Overview)
      * [产品功能](/pathx/introduction/Function)
-     * [产品优势](/unet/introduction/Advantage)
+     * [产品优势](/pathx/introduction/Advantage)
      * [应用场景]
-         * [游戏加速](/unet/introduction/Limit/Bandwidth)
-         * [海外店铺管理](/unet/introduction/Limit/Firewall)
-         * [企业业务加速](/unet/introduction/Limit/Bind_NAT)
+         * [游戏加速](/pathx/introduction/Scene/accelerate)
+         * [海外店铺管理](/pathx/introduction/Scene/cross)
+         * [企业业务加速](/pathx/introduction/Scene/company)
      * [使用限制]
          * [安全合规限制](/unet/introduction/Limit/Bandwidth)
          * [端口限制](/unet/introduction/Limit/Firewall)
