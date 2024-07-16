@@ -16,46 +16,19 @@
      * [计费示例](/pathx/buy/example)
 * 操作指南
      * 加速配置
-         * [申请EIP](/unet/guide/EIP/Apply)
-         * [绑定/解绑EIP](/unet/guide/EIP/Bind)
-         * [释放EIP](/unet/guide/EIP/Release)
-         * [调整带宽](/unet/guide/EIP/Adjust_Bandwidth)
-         * [更改计费方式](/unet/guide/EIP/Change_Billingmethod)
-     * 共享带宽
-         * [创建共享带宽](/unet/guide/Shared_Bandwidth/Create)
-         * [删除共享带宽](/unet/guide/Shared_Bandwidth/Delete)
-         * [调整带宽](/unet/guide/Shared_Bandwidth/Adjust_Bandwidth)
-     * 带宽包
-         * [申请带宽包](/unet/guide/Bandwidth_Package/Apply)
-         * [删除带宽包](/unet/guide/Bandwidth_Package/Delete)
-     * 外网防火墙
-         * [推荐防火墙](/unet/guide/Firewall/Recommended_Firewall)
-         * [创建防火墙](/unet/guide/Firewall/Create)
-         * [绑定资源管理](/unet/guide/Firewall/Bind)
-         * [复制防火墙](/unet/guide/Firewall/Copy)
-         * [删除防火墙](/unet/guide/Firewall/Delete)
-* [故障排查](/unet/troubleshooting)
-* FAQ
-     * [带宽相关](/unet/faq/bandwidth)
-     * [外网访问与隔离](/unet/faq/access)
-     * [防火墙](/unet/faq/firewall)
-     * [EIP使用相关](/unet/faq/eip)
-     * [其他](/unet/faq/other)
-
-
-
-
-# 概览
-
-* [产品简介](/pathx/intro) 
-* [功能简介](/pathx/function) 
-* [产品优势](/pathx/superiority) 
-* [名词解释](/pathx/concepts) 
-* [使用指南](/pathx/briefguide) 
-* [免费域名加速](pathx/domainacceleration)
-* [价格说明](/pathx/price) 
+         * [创建加速配置](/pathx/guide/configuration/create)
+         * [修改加速区域](/pathx/guide/configuration/modify)
+         * [删除加速配置](/pathx/guide/configuration/delete)
+         * [添加黑/白名单](/pathx/guide/configuration/add)
+     * 加速线路
+         * [创建加速线路](/pathx/guide/line/create)
+         * [修改加速带宽](/pathx/guide/line/modify)
+         * [删除加速线路](/pathx/guide/line/delete)
+     * [CNAME域名](/pathx/guide/cname)
+* 最佳实践
+     * [通过全球动态加速实现海外用户加速访问国内网站](/pathx/best/example1)
 * [证书格式](/pathx/sslformat) 
 * [FAQ](/pathx/faq) 
-* [苹果审核加速通道](/pathx/apple) 
+
 
 
