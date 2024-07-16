@@ -5,7 +5,7 @@
 
 - 源站类型：需要加速的IP或者域名，二者选一即可，为了灵活扩展源站服务器规模，建议填写域名。
 - 多端口加速：一个加速配置可同时对源站多个端口做加速转发。
-- 多协议加速：支持TCP、UDP 4层转发，及HTTP、HTTPS、WS、WSS 7层转发；使用TCP可以支持HTTP HTTPS HTTP2 Websocket等场景；使用UDP可以支持QUIC协议、聊天室等应用
+- 多协议加速：支持TCP、UDP 4层转发，及HTTP、HTTPS、WS、WSS 7层转发；使用TCP可以支持HTTP、HTTPS、HTTP2、Websocket等场景；使用UDP可以支持QUIC协议、聊天室等应用
 - 加速配置：配置待加速的源站服务器（IP/域名），支持多个业务端口，指定源站所在地，选择已经购买的加速线路。
 
 ## 加速线路
