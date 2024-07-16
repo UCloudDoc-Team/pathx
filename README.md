@@ -4,26 +4,18 @@
      * [产品概述](/pathx/introduction/Overview)
      * [产品功能](/pathx/introduction/Function)
      * [产品优势](/pathx/introduction/Advantage)
-     * [应用场景]
+     * 应用场景
          * [游戏加速](/pathx/introduction/Scene/accelerate)
          * [海外店铺管理](/pathx/introduction/Scene/cross)
          * [企业业务加速](/pathx/introduction/Scene/company)
-     * [使用限制]
-         * [安全合规限制](/unet/introduction/Limit/Bandwidth)
-         * [端口限制](/unet/introduction/Limit/Firewall)
+     * 使用限制
+         * [安全合规限制](/pathx/introduction/Limit/safe)
+         * [端口限制](/pathx/introduction/Limit/port)
 * 购买指南
-     * 计费规则
-         * [计费概述](/unet/buy/Rule/introduction)
-         * [计费示例](/unet/buy/Rule/Example)
-     * 产品价格
-         * [流量价格](/unet/eip_price/traffic)
-         * [带宽价格](/unet/eip_price/bandwidth)
-         * [共享带宽价格](/unet/eip_price/sharebandwidth)
-         * [IP地址价格](/unet/eip_price/ipaddress)
-         * [带宽包价格](/unet/eip_price/bandwidthpackage)
-     * [资源过期回收](/unet/eip_recycle/introduction)
+     * [计费项](/pathx/buy/introduction)
+     * [计费示例](/pathx/buy/example)
 * 操作指南
-     * 外网弹性IP
+     * 加速配置
          * [申请EIP](/unet/guide/EIP/Apply)
          * [绑定/解绑EIP](/unet/guide/EIP/Bind)
          * [释放EIP](/unet/guide/EIP/Release)
