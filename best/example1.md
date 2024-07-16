@@ -10,7 +10,7 @@
 | -------- | ------------------------------------------------------------ | ---- |
 | 加速线路 | 洛杉矶 -> 中国内地<br>中国香港 -> 中国内地                       | 2    |
 | 加速配置 | 源站地址：www.ucloud.cn<br>协议及端口：<br>TCP 22端口<br>HTTP 80端口     | 1    |
-| DNS解析  | **场景一：业务域名托管的**DNS**解析服务商支持按地区智能解析**<br>业务域名 [www.ucloud.cn](http://www.ucloud.cn/) 在中国地区有一条A记录指向 106.75.148.xx，保留该条记录； 创建加速配置后，复制加速域名，在DNS解析服务控制台上为美国和中国香港地区各增加一条解析记录，类型选择CNAME，值填写 $yours.pathx.ucloudgda.com，配置完成后，等待DNS全球生效后，在美国或中国香港地区dig [www.ucloud.cn](http://www.ucloud.cn/) 即可看到PathX的加速域名，而在中国大陆地区 dig [www.ucloud.cn](http://www.ucloud.cn/) ，依然得到源站 106.75.148.xx<br>**场景二：业务域名托管的**DNS**解析服务商不支持按地区智能解析**<br>如果您期望在加速区域CNAME到加速域名，同时在源站部署区域客户端请求访问直接去源站。目前推荐的办法是在加速区域申请使用新的域名如 web.ucloud.cn，添加默认 CNAME记录到 $yours.pathx.ucloudgda.com。而 [www.ucloud.cn](http://www.ucloud.cn/) 保留原来的DNS记录不变。 | 2    |
+| DNS解析  | **场景一：业务域名托管的**DNS**解析服务商支持按地区智能解析**<br>业务域名 [www.ucloud.cn](http://www.ucloud.cn/) 在中国地区有一条A记录指向 106.75.148.xx，保留该条记录； 创建加速配置后，复制加速域名，在DNS解析服务控制台上为美国和中国香港地区各增加一条解析记录，类型选择CNAME，值填写 $yours.pathx.ucloudgda.com，配置完成后，等待DNS全球生效后，在美国或中国香港地区dig [www.ucloud.cn](http://www.ucloud.cn/) 即可看到PathX的加速域名，而在中国大陆地区 dig [www.ucloud.cn](http://www.ucloud.cn/) ，依然得到源站 106.75.148.xx<br>**场景二：业务域名托管的**DNS**解析服务商不支持按地区智能解析**<br>如果您期望在加速区域CNAME到加速域名，同时在源站部署区域客户端请求访问直接去源站。目前推荐的办法是在加速区域申请使用新的域名如 web.ucloud.cn，添加默认CNAME记录到 $yours.pathx.ucloudgda.com。而 [www.ucloud.cn](http://www.ucloud.cn/) 保留原来的DNS记录不变。 | 2    |
 
 **流程简介**
 <br>
