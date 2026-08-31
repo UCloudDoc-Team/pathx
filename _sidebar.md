@@ -12,6 +12,7 @@
      * 使用限制
          * [安全合规限制](/pathx/introduction/Limit/safe)
          * [端口限制](/pathx/introduction/Limit/port)
+     * [资源过期回收](/pathx/introduction/recycle)
 * 购买指南
      * [计费项](/pathx/buy/introduction)
      * [计费示例](/pathx/buy/example)
